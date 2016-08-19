@@ -1,0 +1,75 @@
+.mails-container {
+  width: 650px;
+  border: 1px solid #ddd;
+  background-color: white;
+  .mails-navbar {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    .select-mails {
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      outline: none;
+    }
+    .create-mail {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 5px;
+      outline: none;
+      cursor: pointer;
+      background-color: #4a90e2;
+      color: white;
+    }
+    .delete-mail {
+      @extend .create-mail;
+      background-color: #ff3820;
+    }
+    .search-mail {
+      padding: 5px;
+      border-radius: 5px;
+      outline: none;
+      border: 1px solid #ddd;
+    }
+  }
+  .mails-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    .mails-list-title {
+      vertical-align: text-bottom;
+      margin: 0 20px;
+      text-decoration: none;
+      color: black;
+      &:hover {
+        color: #0f7595;
+        text-decoration: underline;
+      }
+    }
+    .mails-list-details {
+      width: 100%;
+      padding: 5px;
+    }
+  }
+  .mails-blank {
+    position: absolute;
+    z-index: 1000;
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #0f7595;
+    .mails-blank-title {
+      width: 100%;
+    }
+    .mails-blank-content {
+      width: 100%;
+      margin: 10px 0;
+    }
+    .mails-blank-date {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}

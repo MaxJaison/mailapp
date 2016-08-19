@@ -1,0 +1,83 @@
+body {
+  background-color: cadetblue;
+  font-family: 'Roboto', sans-serif; }
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; }
+
+.navbar {
+  display: block;
+  width: 200px;
+  text-align: center;
+  background-color: white; }
+  .navbar .navbar-link {
+    padding: 10px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    display: block; }
+    .navbar .navbar-link:hover {
+      text-decoration: underline; }
+
+.mails-container {
+  width: 650px;
+  border: 1px solid #ddd;
+  background-color: white; }
+  .mails-container .mails-navbar {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; }
+    .mails-container .mails-navbar .select-mails {
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      outline: none; }
+    .mails-container .mails-navbar .create-mail, .mails-container .mails-navbar .delete-mail {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 5px;
+      outline: none;
+      cursor: pointer;
+      background-color: #4a90e2;
+      color: white; }
+    .mails-container .mails-navbar .delete-mail {
+      background-color: #ff3820; }
+    .mails-container .mails-navbar .search-mail {
+      padding: 5px;
+      border-radius: 5px;
+      outline: none;
+      border: 1px solid #ddd; }
+  .mails-container .mails-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    padding: 10px; }
+    .mails-container .mails-list .mails-list-title {
+      vertical-align: text-bottom;
+      margin: 0 20px;
+      text-decoration: none;
+      color: black; }
+      .mails-container .mails-list .mails-list-title:hover {
+        color: #0f7595;
+        text-decoration: underline; }
+    .mails-container .mails-list .mails-list-details {
+      width: 100%;
+      padding: 5px; }
+  .mails-container .mails-blank {
+    position: absolute;
+    z-index: 1000;
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #0f7595; }
+    .mails-container .mails-blank .mails-blank-title {
+      width: 100%; }
+    .mails-container .mails-blank .mails-blank-content {
+      width: 100%;
+      margin: 10px 0; }
+    .mails-container .mails-blank .mails-blank-date {
+      width: 100%;
+      margin-bottom: 10px; }

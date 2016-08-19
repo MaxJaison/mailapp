@@ -1,0 +1,15 @@
+.navbar {
+  display: block;
+  width: 200px;
+  text-align: center;
+  background-color: white;
+  .navbar-link {
+    padding: 10px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    display: block;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<div class="mails-container">
+    <div ng-if="$ctrl.showBlankMail" class="mails-blank">
+        <input class="mails-blank-title" type="text" ng-model="$ctrl.newMail.title" placeholder="Заглавие письма" required>
+        <textarea class="mails-blank-content" name="" id="" cols="20" rows="10" required></textarea>
+        <input class="mails-blank-date" type="date" ng-model="$ctrl.newMail.date">
+        <button class="create-mail" ng-click="$ctrl.saveMail($ctrl.newMail)">Сохранить</button>
+        <button class="delete-mail" ng-click="$ctrl.cancelMail()">Отменить</button>
+    </div>
+    <nav class="mails-navbar">
+        <button ng-if="$ctrl.uiRouterState.current.name == 'inbox'" class="create-mail" ng-click="$ctrl.createMail()">Создать</button>
+        <button class="delete-mail" ng-click="$ctrl.deleteMail()">Удалить</button>
+        <select class="select-mails">
+            <option>Прочитные</option>
+            <option>Не прочитанные</option>
+            <option>Спам</option>
+        </select>
+        <input class="search-mail" type="text" ng-model="query" placeholder="поиск">
+    </nav>
+    <div ng-if="$ctrl.uiRouterState.current.name == 'inbox'" class="mails-list" ng-repeat="mail in $ctrl.mails | filter:query">
+        <input type="checkbox" ng-model="mail.checked">
+        <a href="" ng-click="$ctrl.showDetails(mail)" class="mails-list-title">{{mail.title}}</a>
+        <span class="mails-list-date">{{mail.date}}</span>
+        <div ng-if="mail.detail" class="mails-list-details">{{mail.details}}</div>
+    </div>
+    <div ng-if="$ctrl.uiRouterState.current.name == 'sent'" class="mails-list" ng-repeat="mail in $ctrl.sentMails | filter:query">
+        <input type="checkbox" ng-model="mail.checked">
+        <a href="" ng-click="$ctrl.showDetails(mail)" class="mails-list-title">{{mail.title}}</a>
+        <span class="mails-list-date">{{mail.date}}</span>
+        <div ng-if="mail.detail" class="mails-list-details">{{mail.details}}</div>
+    </div>
+</div>
